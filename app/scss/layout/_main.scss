@@ -1,0 +1,333 @@
+@import "../helpers/mixins";
+
+.discography, .concert-tours {
+  margin-top: 103px;
+  .hr-sect {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.35);
+    margin: 8px 0px;
+  }
+  hr {
+    width: 500px;
+    border: 1px solid;
+    position: relative;
+    margin: 0 auto;
+    top: 37px;
+    @media screen and (min-width: 901px) and (max-width: 1160px) {
+      top: 35px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 900px) {
+      top: 33px;
+    }
+    @media screen and (min-width: 375px) and (max-width: 767px) {
+      top: 25px;
+      width: 320px;
+      right: 7px;
+    }
+    @media screen and (min-width: 320px) and (max-width: 374px) {
+      top: 25px;
+      width: 290px;
+    }
+  }
+  h3 {
+    font-size: 3.155625em;
+    text-transform: uppercase;
+    color: #986a53;
+    letter-spacing: 5px;
+    text-align: center;
+    @media screen and (max-width: 767px) and (min-width: 375px) {
+      font-size: 2.8em;
+    }
+  }
+  p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #798285;
+    line-height: 1.8;
+    letter-spacing: 2.5px;
+  }
+  .discography-song {
+    margin-top: 168px;
+    .writing-year {
+      @include writing-year(#595959);
+    }
+    .song-name {
+      @include song-name(38px, #000000);
+    }
+    .detail {
+      bottom: 21px;
+      @media screen and (max-width: 767px) {
+        bottom: 0;
+        top: 45px;
+      }
+      .song-name_by {
+        font-size: 23px;
+        color: #000;
+        letter-spacing: 0.5px;
+        padding-bottom: 12px;
+      }
+      .song-detail {
+        font-size: 14px;
+        color: #798285;
+        line-height: 1.9;
+        letter-spacing: 0.8px;
+      }
+    }
+    .detail-t_02 {
+      position: relative;
+      bottom: 56px;
+    }
+    .play-video {
+      margin-top: 23px;
+      input {
+        outline: none;
+      }
+    }
+  }
+  .song_01 {
+    margin-top: 100px;
+  }
+  .song_02 {
+    margin-top: 117px;
+  }
+}
+
+.concert-tours {
+  hr {
+    width: 550px;
+    @media screen and (max-width: 767px) and (min-width: 375px) {
+      top: 21px;
+      width: 330px;
+      right: 12px;
+    }
+  }
+  h3 {
+    color: #62a2ad;
+    @media screen and (max-width: 767px) and (min-width: 375px) {
+      font-size: 2.4em;
+    }
+  }
+  .bg-concert {
+    margin-top: 117px;
+    position: relative;
+    .content-concert {
+      z-index: 100;
+      position: absolute;
+      top: 344px;
+      left: 367px;
+      .writing-year {
+        @include writing-year(#777a7a);
+      }
+      .song-name {
+        @include song-name(3px, #000000);
+        position: relative;
+      }
+      .present {
+        @include present(#232424, 0.5px, 12px);
+      }
+      .content-present {
+        @include content-present(1.7, 0.1px);
+      }
+      .btn-primary {
+        @include btn-primary(34px, 196px, 55px);
+        .fa-chevron-right {
+          @include fa-chevron-right(16px, 2px);
+        }
+      }
+    }
+  }
+}
+
+.latter-composition {
+  margin-top: 103px;
+  hr {
+    width: 700px;
+    border: 1px solid;
+    position: relative;
+    margin: 0 auto;
+    top: 37px;
+    @media screen and (min-width: 901px) and (max-width: 1160px) {
+      top: 35px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 900px) {
+      top: 33px;
+    }
+    @media screen and (min-width: 375px) and (max-width: 767px) {
+      top: 13px;
+      width: 310px;
+    }
+    @media screen and (min-width: 320px) and (max-width: 374px) {
+      top: 13px;
+      width: 310px;
+    }
+  }
+  h3 {
+    font-size: 3.155625em;
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 5px;
+    text-align: center;
+    @media screen and (max-width: 767px) and (min-width: 375px) {
+      font-size: 1.5em;
+    }
+  }
+  p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #798285;
+    line-height: 1.8;
+    letter-spacing: 2.5px;
+  }
+  .content-latter {
+    margin-top: 154px;
+    .triangle-right {
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 48.5%;
+      top: 44%;
+      z-index: 1;
+      border-top: 14px solid transparent;
+      border-left: 22px solid #f5f6f6;
+      border-bottom: 14px solid transparent;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+    .triangle-left {
+      width: 0;
+      height: 0;
+      position: absolute;
+      z-index: 1;
+      left: 48.08%;
+      top: 48%;
+      border-top: 14px solid transparent;
+      border-right: 22px solid #f5f6f6;
+      border-bottom: 14px solid transparent;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+    .content-left {
+      background: #f5f6f6;
+      padding: 21px 44px 38px 39px;
+      .writing-year {
+        @include writing-year(#777a7a);
+        width: 358px;
+        @media (max-width: 522px) {
+          width: 280px;
+        }
+      }
+      .song-name {
+        @include song-name(3px, #000000);
+        position: relative;
+      }
+      .present {
+        @include present(#232424, 0.5px, 12px);
+        margin-top: 31px;
+      }
+      .content-present {
+        @include content-present(1.7, 0.1px);
+        padding-top: 10px;
+        padding-bottom: 18px;
+      }
+      .btn-primary {
+        @include btn-primary(34px, 196px, 55px);
+        letter-spacing: 1px;
+        @media (min-width: 992px) {
+          width: 150px;
+          font-size: 0.7em;
+        }
+        @media (max-width: 522px) {
+          display: block;
+        }
+        .fa-chevron-right {
+          @include fa-chevron-right(11px, 2px);
+        }
+      }
+      span.icon-volume, span.icon-heart, span.icon-share, span.icon-comment {
+        position: relative;
+        top: 35px;
+        left: 35px;
+        color: #abacac;
+        font-size: 12px;
+        i {
+          color: #abacac;
+          position: relative;
+          right: 11px;
+        }
+      }
+      span.icon-heart {
+        left: 62px;
+      }
+      span.icon-share {
+        left: 91px;
+      }
+      span.icon-comment {
+        left: 119px;
+      }
+    }
+    .content-right {
+      padding-left: 0;
+      padding-right: 0;
+      iframe {
+        width: 100%;
+        @media screen and (min-width: 992px) and (max-width: 1160px) {
+          height: 416px;
+        }
+        @media screen and (min-width: 1161px) and (max-width: 1199px) {
+          height: 428px;
+        }
+      }
+    }
+    .right_0 {
+      @media screen and (max-width: 991px) {
+        margin-top: 7px;
+      }
+    }
+    .right_02 {
+      @media screen and (max-width: 991px) {
+        margin-top: 7px;
+      }
+      iframe {
+        @media screen and (min-width: 992px) and (max-width: 1160px) {
+          height: 384px;
+        }
+        @media screen and (min-width: 1161px) and (max-width: 1199px) {
+          height: 394px;
+        }
+      }
+    }
+  }
+
+}
+
+.upcoming-event {
+  margin-top: 123px;
+}
+
+.reveal {
+  padding: 2em;
+  background: transparent;
+  border: 0;
+  outline: none;
+  top: 280px !important;
+}
+
+.close-button {
+  position: absolute;
+  top: -0.2em;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+  display: block;
+  outline: none;
+}
+
+.close-button :hover {
+  color: #8ed8f8;
+  text-shadow: 2px 2px 5px black;
+}

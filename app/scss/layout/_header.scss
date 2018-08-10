@@ -1,0 +1,90 @@
+@import "../helpers/mixins";
+
+.top-bar {
+  padding: 0 !important;
+  #nav1 {
+    background-color: #e5e6e6;
+    opacity: 0.5;
+    filter: (opacity=50);
+  }
+  .navbar {
+    padding: 0.1875em 0;
+    .navbar-nav {
+      display: inline-block;
+      float: none;
+      padding-top: 22px;
+      padding-bottom: 6px;
+      li {
+        padding: 0 1.3em;
+        position: relative;
+        @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+          padding: 0 1em;
+        }
+        @media only screen and (max-device-width: 768px) {
+          padding: 0 0.43em;
+        }
+        @media screen and (min-width: 959px) and (max-width: 1078px) {
+          padding: 0 0.9em;
+        }
+        @media screen and (max-width: 958px) {
+          padding: 0 0.3em;
+        }
+        a {
+          text-transform: uppercase;
+          font-size: 1.0625em;
+          font-weight: 500;
+          padding: 0;
+          color: #000000;
+        }
+      }
+
+      & li:after {
+        display: block;
+        content: '';
+        border-bottom: solid 2px #000000;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+      }
+
+      & li:hover:after {
+        transform: scaleX(1);
+      }
+
+      & li:after {
+        transform-origin: 0% 50%;
+        position: relative;
+        top: 5px;
+        @media screen and (max-width: 767px) {
+          top: -2px;
+        }
+      }
+
+      & li.active:after {
+        transform: scaleX(1);
+      }
+
+      & > li > a:hover {
+        color: #000000;
+      }
+
+      & > li.active > a {
+        color: #000000;
+      }
+
+      & > li.active > a:hover {
+        color: #000000;
+      }
+
+      & > .active > a {
+        background: none;
+      }
+
+      & > .active > a:hover {
+        background: none;
+      }
+    }
+    .navbar-collapse {
+      text-align: center;
+    }
+  }
+}
