@@ -36,4 +36,13 @@ $(document).ready(function () {
   $(window).resize(resizeContentConcert)
 
 
+  function resizeContentUpcoming() {
+    $(".upcoming-content").css({
+      "top": $(window).width() / (1920 / 195),
+      "left": $(window).width() / (1920 / 664)
+    })
+  }
+  resizeContentUpcoming()
+  $(window).resize(resizeContentUpcoming)
+
 })

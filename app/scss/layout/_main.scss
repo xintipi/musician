@@ -308,6 +308,44 @@
 
 .upcoming-event {
   margin-top: 123px;
+  position: relative;
+  hr {
+    width: 577px;
+    border: 1px solid;
+    position: relative;
+    margin: 0 auto;
+    top: 37px;
+    @media screen and (min-width: 901px) and (max-width: 1160px) {
+      top: 35px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 900px) {
+      top: 33px;
+    }
+    @media screen and (min-width: 375px) and (max-width: 767px) {
+      top: 13px;
+      width: 310px;
+    }
+    @media screen and (min-width: 320px) and (max-width: 374px) {
+      top: 13px;
+      width: 310px;
+    }
+  }
+  h3 {
+    font-size: 3.155625em;
+    text-transform: uppercase;
+    color: #42717e;
+    letter-spacing: 5px;
+    text-align: center;
+    @media screen and (max-width: 767px) and (min-width: 375px) {
+      font-size: 1.5em;
+    }
+  }
+  .upcoming-content {
+    position: absolute;
+    top: 195px;
+    left: 664px;
+    z-index: 1;
+  }
 }
 
 .reveal {
